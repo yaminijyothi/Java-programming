@@ -1,3 +1,8 @@
+/* 
+* @purpose : Demonstrate the quadratic equation
+* @ file   : Quadratic.java
+* @ author : yaminijyothi
+*/
 package com.bridgelabz.Functionalprogramming;
 
 import com.bridgelabz.utility.Utility;
