@@ -1,6 +1,6 @@
 /* 
- * @purpose : Demonstrate the elapsed time in stopwatch
- * @ file   : stopwatch.java
+ * @purpose : Demonstrate the coupon numbers
+ * @ file   : Coupon.java
  * @ author : yaminijyothi
  */
 package com.bridgelabz.Logicalprogramming;
