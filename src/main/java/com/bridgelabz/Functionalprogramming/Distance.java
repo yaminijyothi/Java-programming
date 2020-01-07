@@ -1,6 +1,6 @@
 /* 
-* @purpose : Demonstrate the elapsed time in stopwatch
-* @ file   : stopwatch.java
+* @purpose : Demonstrate the distance of two points
+* @ file   : Distance.java
 * @ author : yaminijyothi
 */
 package com.bridgelabz.Functionalprogramming;
