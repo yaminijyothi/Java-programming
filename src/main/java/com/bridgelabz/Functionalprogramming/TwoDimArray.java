@@ -9,6 +9,7 @@ import java.io.PrintWriter;
 import com.bridgelabz.utility.Utility;
 
 public class TwoDimArray {
+	//two dimensional integer array
 	public static int[][] arrint(int m, int n) {
 		int arr[][] = new int[m][n];
 		System.out.println("Integer array:");
@@ -19,7 +20,7 @@ public class TwoDimArray {
 		}
 		return arr;
 	}
-
+   //two dimensional boolean array
 	public static String[][] arrayBoolean(int m, int n) {
 		String str[][] = new String[m][n];
 		System.out.println("Boolean Array:");
@@ -30,7 +31,7 @@ public class TwoDimArray {
 		}
 		return str;
 	}
-
+  // two dimensional double array
 	public static double[][] arraydouble(int m, int n) {
 		double b[][] = new double[m][n];
 		System.out.println("double array:");
@@ -41,7 +42,7 @@ public class TwoDimArray {
 		}
 		return b;
 	}
-
+// method to display two dimensional arrays of integer,boolean,double
 	public static void display(int[][] arr,String[][] str,double[][] b,int m,int n)
 	{
 		System.out.println();
@@ -84,6 +85,7 @@ public class TwoDimArray {
        int [][]  arr1=arrint(m,n);
        String[][]  str=arrayBoolean(m,n);
        double [][] b=arraydouble(m,n);
+       //calling display function
        display(arr1,str,b,m,n);
 	}
 }
