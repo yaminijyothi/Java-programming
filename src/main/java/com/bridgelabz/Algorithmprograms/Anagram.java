@@ -32,11 +32,7 @@ public class Anagram {
         {
         	System.out.println(s1+" and "+s2+" are not anagrams");
         }
-        
-		{
-	}
-	
-}
+        }
        //main method
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
