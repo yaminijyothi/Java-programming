@@ -1,5 +1,5 @@
 /* 
- * @purpose : Demonstrate the primenumbers from 1 to 1000
+ * @purpose : finding the primenumbers from 1 to 1000
  * @ file   : PrimeNumbers.java
  * @ author : yaminijyothi
  */
@@ -20,7 +20,7 @@ public class PrimeNumbers {
 				}
 			}
 			if (count == 2) {
-          //print porime number
+          //print prime number
 				System.out.println(n);
 
 			}
