@@ -8,7 +8,7 @@ import java.util.Arrays;
 import com.bridgelabz.utility.Utility;
 
 public class Anagram {
-	public static void isAnagram(String str1,String str2) {
+	public static boolean isAnagram(String str1,String str2) {
 		String s1 = str1.replaceAll("\\s", "");  
         String s2 = str2.replaceAll("\\s", "");  
         boolean status =true;
@@ -27,11 +27,15 @@ public class Anagram {
         if(status)
         {
         	System.out.println(s1+" and "+s2+" are anagrams");
+            return true;
         }
+        
         else
         {
         	System.out.println(s1+" and "+s2+" are not anagrams");
+         return false;
         }
+      
         }
        //main method
 	public static void main(String[] args) {
