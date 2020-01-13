@@ -9,12 +9,13 @@ public class Poweroftwo {
 		int n=Utility.getint();
 		poweroftwo(n);
 	}
-	public static void poweroftwo(int n)
+	public static int poweroftwo(int n)
 	{
 		for(int i=0;i<n;i++)
 		{
 			System.out.println(2+"^"+i+"="+2*i);
 		}
+		return n;
 	}
 
 }
