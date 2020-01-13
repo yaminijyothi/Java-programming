@@ -20,7 +20,7 @@ public class Gambler {
 		gambler(stack,goal,trail);
 		
 		}
-		public static void gambler(int stack,int goal,int trail)
+		public static int gambler(int stack,int goal,int trail)
 		{
 			int wins=0;
 			int bets=0;
@@ -38,7 +38,7 @@ public class Gambler {
 			System.out.println(wins+" wins of "+trail);
 			System.out.println("% of games won:"+100*wins/trail);
 		    System.out.println("% of game loose:"+100*(trail-wins)/trail);
-		    }
-
-		
+		    
+           return 0;
+}
 }
