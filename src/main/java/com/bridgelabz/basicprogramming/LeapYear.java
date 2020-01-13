@@ -7,6 +7,10 @@ public class LeapYear {
   {
 	  System.out.println("enter the year :");
 	  int n=Utility.getint();
+	  leap(n);
+  }
+  public static int leap(int n)
+  {
 	  if(n>999) {
 	if(((n%4==0)&&(n%100!=0))||(n%400==0))
 	{
@@ -19,5 +23,6 @@ public class LeapYear {
 	  else {
 		  System.out.println("year should be in four digits only");
   }
+	  return n;
   }
 }
