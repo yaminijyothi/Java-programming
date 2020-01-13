@@ -17,6 +17,10 @@ public class DayOfWeek {
 		int d=Utility.getint();
 		System.out.println("Enter year:");
 		int y=Utility.getint();
+		week(m,d,y);
+	}
+	public static int week(int m,int d,int y)
+	{
 		int y1=y-(14-m)/12;
 		int x=y1+y1/4-y1/100+y1/400;
 		int  m1=m+12*((14-m)/12)-2;
@@ -46,5 +50,6 @@ public class DayOfWeek {
 		    break;
 		  
 			}
+		return d1;
 	}
 }
