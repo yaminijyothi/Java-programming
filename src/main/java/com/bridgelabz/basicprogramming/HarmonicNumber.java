@@ -10,7 +10,7 @@ int n=Utility.getint();
 harmonic(n);
 }
 //harmonic=1+1/1+1/2+1/3+....+1/n
-public static void harmonic(int n)
+public static float harmonic(int n)
 {
 	float harmonic=1;
 
@@ -19,6 +19,7 @@ public static void harmonic(int n)
 	  harmonic+=(float)  1/i;
   }
   System.out.println(harmonic);
+  return harmonic;
 }
 }
 
