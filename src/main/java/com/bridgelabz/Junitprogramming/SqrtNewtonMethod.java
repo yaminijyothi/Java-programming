@@ -12,11 +12,16 @@ public class SqrtNewtonMethod {
 	double c=Double.parseDouble(args[0]);
     double e= 1e-15;
     double t=c;
+    newtonmethod(c,e,t);
+	}
+	public static boolean newtonmethod(double c,double e,double t)
+	{
     while(Math.abs(t-c/t)>e*t)
     {
   	  t=(c/t+t)/2.0;
     }
     System.out.println(t);
+    return true;
 	}
 }
 
