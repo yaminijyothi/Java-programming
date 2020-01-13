@@ -16,8 +16,13 @@ public class Distance {
      System.out.println("enter y value:");
      int y=Utility.getint();
      // to calculate the distance between two points
+     distance(x,y);
+	}
+	public static double distance(int x,int y)
+	{
      double distance=Math.sqrt(x*x+y*y);
      System.out.println("Distance from ("+x+","+y+") to (0,0) is "+distance);
+	return distance;
 	}
 
 }

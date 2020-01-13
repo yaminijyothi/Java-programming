@@ -17,6 +17,10 @@ public class Quadratic {
 		float b=Utility.getfloat();
 		System.out.println("enter the value of c:");
 		float c=Utility.getfloat();
+		quadratic(a,b,c);
+	}
+	public static boolean quadratic(float a,float b,float c)
+	{
 		float root1,root2;
 		float result;
 		result=b*b-4*a*c;
@@ -36,6 +40,7 @@ public class Quadratic {
 	            double imaginaryPart = Math.sqrt(-result) / (2 * a);
 	            System.out.format("root1 = %.2f+%.2fi and root2 = %.2f-%.2fi", realPart, imaginaryPart, realPart, imaginaryPart);
 	        }
+		return true;
 	    
 	}
 
