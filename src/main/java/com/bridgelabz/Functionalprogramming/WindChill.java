@@ -17,17 +17,21 @@ public class WindChill {
         
         System.out.println("Enter the temperature(fahrenheit):");
         temp=Utility.getLong();	
+        windchill(windspeed,temp);
+	}
+	public static long windchill(long windspeed,long temp)
+	{
           if(temp>50)
         	  
           {
         	  System.out.println("the formula is not valid if temperature greater than 50");
-        	  return;
+        
           }
           //calculate windchill by using formula
-		windchill =(long) (35.74 + 0.6215*temp + (0.4275 * temp-35.75) * Math.pow(windspeed,0.16));
+		long windchill = (long) (35.74 + 0.6215*temp + (0.4275 * temp-35.75) * Math.pow(windspeed,0.16));
         
           System.out.println("the windchill is: " +windchill);
-        
+        return windchill;
     }
 	}
 
