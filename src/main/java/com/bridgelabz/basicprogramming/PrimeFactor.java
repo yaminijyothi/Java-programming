@@ -9,7 +9,7 @@ public static void main(String[] args)
     int	n=Utility.getint();
     primefactor(n);
 }
-public static void primefactor(int n)
+public static int primefactor(int n)
 {
 	
     for(int i=2;i<=n;i++)
@@ -19,6 +19,7 @@ public static void primefactor(int n)
     		n=n/i; 
 	}
 }
+    return n;
 	
 }
 }
