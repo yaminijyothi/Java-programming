@@ -15,6 +15,10 @@ public class Coupon {
 		System.out.println("enter number of coupons requied:");
 		int n = Utility.getint();
 		int arr[] = new int[10];
+		coupon(n,arr);
+	}
+		public static int coupon(int n,int arr[])
+		{
 		Random rand = new Random();
 		//logic for non repeated coupon numbers
 		for (int i = 0; i < n; i++) {
@@ -27,6 +31,7 @@ public class Coupon {
 			}
 
 		}
+		return n;
 	}
 
 }
