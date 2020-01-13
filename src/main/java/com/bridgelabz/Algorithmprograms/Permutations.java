@@ -19,10 +19,10 @@ static ArrayList<String> result=new ArrayList<>();
 		String str=Utility.getString();
 		getPermutation("",str);
 		//printing String permutations
-		System.out.println(Arrays.deepToString(result.toArray()));
+		System.out.println(Arrays.toString(result.toArray()));
 	}
 	   // method for permutations for string 
-	static ArrayList<String>getPermutation(String fix,String unfix)
+	static ArrayList<String> getPermutation(String fix,String unfix)
 	{
 		if(unfix.length()==0)
 		{
