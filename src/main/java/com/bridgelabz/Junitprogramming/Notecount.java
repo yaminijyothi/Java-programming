@@ -10,7 +10,7 @@ import com.bridgelabz.utility.Utility;
 public class Notecount {
 
 	// TODO Auto-generated method stub
-	public static void Currency(int amount) 
+	public static boolean Currency(int amount) 
 	{ 
 		int[] notes = new int[]{ 2000, 500, 100, 50, 10, 5, 1 }; 
 		int[] noteCount = new int[7]; 
@@ -31,6 +31,7 @@ public class Notecount {
 						+ noteCount[i]); 
 			} 
 		} 
+		return true;
 	} 
 	//main method
 	public static void main(String argc[]){ 
