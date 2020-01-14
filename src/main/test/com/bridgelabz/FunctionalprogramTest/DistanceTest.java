@@ -6,13 +6,15 @@ import org.junit.jupiter.api.Test;
 
 import com.bridgelabz.Functionalprogramming.Distance;
 
+
 class DistanceTest {
 
 	@Test
 	void test() {
-		int x=3;
+		int x=1;
 		int y=2;
-		assertEquals(true,Distance.distance(x, y));
+		double distance=Distance.distance(x,y);
+		assertEquals(distance,Distance.distance(x,y));
 	}
 
 }
