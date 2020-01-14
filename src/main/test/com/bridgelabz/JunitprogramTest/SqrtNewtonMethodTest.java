@@ -13,7 +13,7 @@ class SqrtNewtonMethodTest {
 		double c=5;
 	    double e= 1e-15;
 	    double t=c;
-	   assertEquals(true,SqrtNewtonMethod.newton(c,e,t));
+	   assertEquals(true,SqrtNewtonMethod.newtonmethod(c,e,t));
 
 }
 }
