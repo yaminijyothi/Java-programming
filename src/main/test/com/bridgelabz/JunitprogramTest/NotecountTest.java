@@ -11,7 +11,7 @@ class NotecountTest {
 
 	@Test
 	void test() {
-		int ammount=500;
+		int ammount=4500;
 		assertEquals(true,Notecount.Currency(ammount));
 	}
 
