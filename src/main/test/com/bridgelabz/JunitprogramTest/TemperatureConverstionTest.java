@@ -10,8 +10,9 @@ class TemperatureConverstionTest {
 
 	@Test
 	void test() {
-		double f=30;
-		assertEquals(true,TemperatureConverstion.celsius(f));
+		double F=40;
+		double c=TemperatureConverstion.celsius(F);
+		assertEquals(c,TemperatureConverstion.celsius(F));
 		
 	}
 
