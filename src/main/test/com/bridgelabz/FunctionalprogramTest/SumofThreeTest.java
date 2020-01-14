@@ -11,7 +11,8 @@ class SumofThreeTest {
 	@Test
 	void test() {
 		int  n=5;
-		int arr[]= {1,-2,3,-1,2};
-		assertEquals(true,SumofThree.sumofthree(n,arr));
+		int arr[]= {1,-2,-1,-2,3};
+		int count=SumofThree.sumofthree(n,arr);
+		assertEquals(count,SumofThree.sumofthree(n,arr));
 	}
 }
