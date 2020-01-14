@@ -10,7 +10,10 @@ public class PrimeNumbers {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("The primenumbers are are:");
-		int i, n;
+		primeNumber();
+	}
+	public static boolean primeNumber() {
+		int i,n;
 		for (n = 1; n <= 1000; n++) {
 			int count = 0;
 			//logic for prime number
@@ -25,6 +28,7 @@ public class PrimeNumbers {
 
 			}
 		}
+		return true;
 	}
 }
 
