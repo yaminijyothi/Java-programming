@@ -1,3 +1,8 @@
+/* 
+* @purpose : Testing for DayOfweek
+* @ file   : DayofWeekTest.java
+* @ author : yaminijyothi
+*/
 package com.bridgelabz.JunitprogramTest;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,7 +18,8 @@ class DayOfweekTest {
 		int m=8;
 		int d=3;
 		int y=1998;
-		assertEquals(true,DayOfWeek.dayofweek(m,d,y));
+		int d1=DayOfWeek.week(m,d,y);
+		assertEquals(d1,DayOfWeek.week(m,d,y));
 	}
 
 	
