@@ -10,9 +10,9 @@ class QuadraticTest {
 
 	@Test
 	void test() {
-		float a=2;
-		float b=3;
-		float c=4;
+		float a=1;
+		float b=2;
+		float c=3;
 		assertEquals(true,Quadratic.quadratic(a, b, c));
 	}
 
