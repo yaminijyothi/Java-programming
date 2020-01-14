@@ -20,7 +20,7 @@ public class SearchN {
 		}
 		findNumber(arr);
 	}
-	public static void findNumber(int arr[])
+	public static void  findNumber(int arr[])
 	{
 		int low=0;
 		int high=arr.length;
@@ -43,4 +43,5 @@ public class SearchN {
 			}
 		}
 	}
+	
 }
