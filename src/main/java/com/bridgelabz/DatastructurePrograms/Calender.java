@@ -13,16 +13,16 @@ public class Calender {
 		int[] day= {0,31,28,31,30,31,30,31,31,30,31,30,31};
 		if(month==2&&isLeap(year))
 			day[month]=29;
-		System.out.println("     "+months[month]+"          YEAR");
-		System.out.println("SON  MON  TUS  WED  THU  FRI  SAT");
+		System.out.println("    MONTH:"+months[month]+"                 YEAR:"+year);
+		System.out.println("SON\tMON\tTUS\tWED\tTHU\tFRI\tSAT");
 		int d=day(month,1,year);
 		for(int i=0;i<d;i++)
 		{
 			System.out.print("            ");
 		}
-		for(int i=0;i<=day[month];i++)
+		for(int i=1;i<=day[month];i++)
 		{
-			System.out.print(i+" ");
+			System.out.print(i+"\t");
 			if((i+d)%7==0||i==day[month])
 			{
 				System.out.println();
