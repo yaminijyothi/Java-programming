@@ -4,6 +4,7 @@
 * @ author : yaminijyothi
 */
 package com.bridgelabz.utility;
+import java.io.IOException;
 import java.util.Scanner;
 public class Utility {
 	private static final String String = null;
@@ -47,4 +48,5 @@ for(int i=0;i<ch.length;i++)
 }
 return out;
 }
+//swaping binary
 }
