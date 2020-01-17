@@ -9,7 +9,7 @@ public class BalancedParathesis {
 //main method
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String exp="(6+1)/(3-1)*(1+2" ;
+		String exp="(5+6)∗(7+8)/(4+3)(5+6)∗(7+8)/(4+3)" ;
 		String result=isBalanced(exp)?"balanced":"notbalanced";
 	    System.out.println("Given equation is "+result);
 		
