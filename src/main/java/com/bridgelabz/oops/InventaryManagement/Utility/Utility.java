@@ -1,11 +1,13 @@
 package com.bridgelabz.oops.InventaryManagement.Utility;
 
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 public class Utility {
 
@@ -51,63 +53,20 @@ public class Utility {
 
 	}
 	//declaring a json array to strore all elements in data
-	static JSONArray  arr=new JSONArray();
-	//rice object
-	@SuppressWarnings("unchecked")
-	public static JSONObject rice(String name,long weight,long price) {
-		// TODO Auto-generated method stub
-
-		JSONObject obj= new JSONObject();
-		obj.put("Name",name);
-		obj.put("weight", weight);
-		obj.put("price",price);
-
-
-		JSONObject json= new JSONObject();
-		json.put("Rice", obj);
-		arr.add(json);
-		writeIntoFile(arr);
-		return json;
+	public static JSONArray readFile() throws Exception {
+		JSONParser jsonParser = new JSONParser();
+		FileReader reader = new FileReader("inventory.json");
+		// Read JSON file
+		JSONArray obj = (JSONArray) jsonParser.parse(reader);
+		return obj;
 	}
-//wheat object
-	@SuppressWarnings("unchecked")
-	public static JSONObject wheat(String wname, long wweight, long wprice) {
-		// TODO Auto-generated method stub
-		JSONObject obj= new JSONObject();
-		obj.put("Name",wname);
-		obj.put("weight",wweight);
-		obj.put("price",wprice);
 
-
-		JSONObject json= new JSONObject();
-		json.put("Wheat", obj);
-
-		arr.add(json);
-		writeIntoFile(arr);
-		return json;
-	}
-//to read the data
-	public static void read(JSONObject data) {
-		// TODO Auto-generated method stub
-
-		JSONObject Data = (JSONObject)data.get("Rice");
-
-		String riceName = (String)Data.get("Name");
-		long riceWeight = (long)Data.get("weight");
-		long ricePrice = (long)Data.get("price");
-
-		System.out.println("Name:"+riceName);
-		System.out.println("Weight:"+riceWeight);
-		System.out.println("price:"+ricePrice);
-
-	}	
-//data write into file using filewriter
-	public static void writeIntoFile(JSONArray arr)  {
+	public static void writeIntoFile(JSONArray array)  {
 		// TODO Auto-generated method stub
 
 		try {
-			FileWriter write=new FileWriter("/home/user/Desktop/inventory.json");
-			write.write(arr.toJSONString());
+			FileWriter write=new FileWriter("inventory.json");
+			write.write(array.toJSONString());
 			write.flush();
 			write.close();
 			System.out.println("file successfully copied...");
@@ -117,6 +76,13 @@ public class Utility {
 		}
 
 	}
-
+	@SuppressWarnings("unchecked")
+	public static JSONObject addData(String name,double weight,double price) {
+		// TODO Auto-generated method stub
+		JSONObject json1= new JSONObject();
+		json1.put("Name",name);
+		json1.put("weight", weight);
+		json1.put("price",price);
+		return json1;
+	}
 }
-
