@@ -2,6 +2,10 @@ package com.bridgelabz.oops.InventaryManagement.Implementation;
 
 public interface service {
 	// implemented by ServiceImplementation
-	void add() throws Exception;
-	void display();
+	void addItems() throws Exception;
+	void displayItems();
+	void calculate();
+	void removeItem();
+	void inventoryProducts();
 }
+
