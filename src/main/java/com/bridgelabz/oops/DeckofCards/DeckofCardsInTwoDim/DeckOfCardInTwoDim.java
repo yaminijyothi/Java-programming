@@ -7,12 +7,11 @@ import java.util.Random;
 
 
 public class DeckOfCardInTwoDim {
-//declaring two dimensional array
+	//declaring two dimensional array
 	static int[][] cards=new int[4][13];
 	//main method starts
-	public static void main(String[] args)
-	{
-		
+	public static void main(String[] args) {
+
 		//cards player
 		for(int playNumber=1;playNumber<=4;playNumber++)
 		{
