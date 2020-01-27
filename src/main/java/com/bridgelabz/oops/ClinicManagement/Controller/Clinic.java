@@ -7,6 +7,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
+import com.bridgelabz.oops.ClinicManagement.Details.Appointment;
+import com.bridgelabz.oops.ClinicManagement.Details.Docter;
+import com.bridgelabz.oops.ClinicManagement.Details.Patient;
+import com.bridgelabz.oops.ClinicManagement.Details.Utility;
+import com.bridgelabz.oops.ClinicManagement.Services.Find;
+
 public class Clinic{
 	@SuppressWarnings("static-access")
 	public static void main(String[] args) throws ParseException {
@@ -27,9 +33,9 @@ public class Clinic{
 			System.out.println("3.print docter");
 			System.out.println("4.print patients:");
 			System.out.println("5.take appointments:");
-			System.out.println("6.print appointments");
-			System.out.println("7.search docter by name,id specialization,avialbility");
-			System.out.println("8.search patient by name,id,mobilenumber:");
+			System.out.println("6.print no of appointments");
+			System.out.println("7.search docter by Id ");
+			System.out.println("8.search patient by Id");
 			System.out.println("9.exit");
 			System.out.println();
 			System.out.println("enter ur choice");
@@ -39,6 +45,7 @@ public class Clinic{
 				System.out.println("Add doctor");
 				docter.addDocter();
 				ad.add(docter);
+				
 				break;
 			case 2://add patient details
 				System.out.println("Add patient");
@@ -56,8 +63,8 @@ public class Clinic{
 			case 5://taking appointment
 				System.out.println("Take an appointment ");
 				System.out.println("Enter doctor id");
-				int did=utility.getInt();
-				ArrayList<Docter>doc=f.findById(ad,did);
+				int drid=utility.getInt();
+				ArrayList<Docter>doc=f.findById(ad,drid);
 				if(doc!=null)
 				{
 					if(doc.size()>=1)
@@ -73,7 +80,7 @@ public class Clinic{
 						else
 						{
 							//creating object for appointment class
-							Appointment newApp=new Appointment(did,date);
+							Appointment newApp=new Appointment(drid,date);
 							System.out.println(newApp.toString());
 							if(appoint.containsKey(newApp))
 							{
@@ -82,7 +89,7 @@ public class Clinic{
 								{
 									appointment++;
 									appoint.put(newApp,appointment);
-									System.out.println("Appointment Scheduled on"+date.toString()+" "+"with DoctorId"+did);
+									System.out.println("Appointment Scheduled on"+date.toString()+" "+"with DoctorId"+drid);
 
 								}
 								else
@@ -96,14 +103,10 @@ public class Clinic{
 						}
 					}
 					else
-					{
 						System.out.println("Invalid doctor id");
-					}
 				}
 				else
-				{
 					System.out.println("Invalid doctor id");
-				}
 				break;
 
 			case 6:
@@ -118,9 +121,7 @@ public class Clinic{
 					System.out.println();
 					System.out.println("Search a doctor");
 					System.out.println("1.search by id");
-					System.out.println("2.search by name");
-					System.out.println("3.Search by availabity");
-					System.out.println("4.exit");
+					System.out.println("2.exit");
 					System.out.println();
 					System.out.println("Enter your choice");
 					int choice1=utility.getInt(); 
@@ -128,21 +129,10 @@ public class Clinic{
 					{
 					case 1 ://searching docter by id
 						System.out.println("1.Enter doctor id");
-						int did1=utility.getInt();
-						ad=f.findById(ad, did1);
+						int drid1=utility.getInt();
+						ad=f.findById(ad, drid1);
 						System.out.println(ad);
-						break;
-					case 2 ://searching docter by name
-						System.out.println("2.Enter doctor by name");
-						String dname=utility.getString();
-						ad=f.findByDrname(ad, dname);
-						System.out.println(ad.toString());
-					case 3 ://searching docter by availability
-						System.out.println("3.Enter doctor availabity");
-						String availabity=utility.getString();
-						ad=f.findByDrname(ad, availabity);
-						System.out.println(ad.toString());
-					case 4 ://to exit
+					case 2 ://to exit
 						System.exit(0);
 					default :
 						System.out.println("Invalid choice");
@@ -159,9 +149,7 @@ public class Clinic{
 					System.out.println("----------Search Patients---------");
 					System.out.println();
 					System.out.println("1.Search Patients By Id");
-					System.out.println("2.Search Patients By Name");
-					System.out.println("3.Search Patients By Mobile Number");
-					System.out.println("4.Exit");
+					System.out.println("2.Exit");
 					System.out.println();
 					System.out.println("Enter your Choice: ");
 					int ch3=utility.getInt();
@@ -174,29 +162,14 @@ public class Clinic{
 						ap=f1.findByPtId(ap,pid1);
 						System.out.println(ap);
 						break;
-
-					case 2:
-						//Search Patients by Name
-						System.out.println("Enter Patients Name");
-						String pname1=utility.getString();
-						ap=f1.findByPtname(ap,pname1);
-						System.out.println(ap);
-						break;
-					case 3:
-						//Search Patients by Mobile Number
-						System.out.println("Enter Patients Mobile Number");
-						String avail1=utility.getString();
-						ap=f1.findByPtavl(ap,avail1);
-						System.out.println(ap);
-						break;
-					case 4://to exit
+					case 2://to exit
 						System.exit(0);
 					default:
 						System.out.println("Invalid choice");
 						break;
 					}
 				}
-				while(ch2<5);
+				while(ch2<3);
 			case 9 :
 				System.exit(0);
 			default :
