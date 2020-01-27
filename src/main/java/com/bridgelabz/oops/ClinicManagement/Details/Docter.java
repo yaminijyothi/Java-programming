@@ -1,10 +1,11 @@
 package com.bridgelabz.oops.ClinicManagement.Details;
 
 public class Docter {
-	private int drid;
-	private String drname;
-	private String drspl;
-	private String dravl;
+	int drid;
+	 String drname;
+	 String drspl;
+	 String dravl;
+	Utility utility=new Utility();
 	public int getDrid() {
 		return drid;
 	}
@@ -29,19 +30,21 @@ public class Docter {
 	public void setDravl(String dravl) {
 		this.dravl = dravl;
 	}//adding details of docter
-	public static void addDocter() {
+	public void addDocter() {
 		System.out.println("enter the docter details");
 		System.out.println("enter docter id");
-		int drid=Utility.getInt();
+		this.drid=Utility.getInt();
 		System.out.println("enter docter name");
-		String drname=Utility.getString();
+		this.drname=Utility.getString();
 		System.out.println("enter docter Specialization");
-		String drspl=Utility.getString();
+		this.drspl=Utility.getString();
 		System.out.println("enter docter availability");
-		String dravl=Utility.getString();
+		this.dravl=Utility.getString();
+		System.out.println();
+		System.out.println("Docotor added..");
 	}
 	public String toString() {
-	return "Doctor[drid="+drid+", drname"+drname+", drspl"+drspl+", dravl="+dravl+"]";
+	return "Doctor[drid="+drid+", drname="+drname+", drspl="+drspl+", dravl="+dravl+"]";
 	}
 	
 }
