@@ -8,7 +8,7 @@ import com.bridgelabz.oops.InventaryManagement.Utility.Utility;
 
 @SuppressWarnings("unused")
 public class Controller {
-
+//main function
 	public static void main(String[] args) {
 		FactoryClass srvc = new FactoryClass();
 		ServiceImplementation inventory = srvc.factoryMethod();
