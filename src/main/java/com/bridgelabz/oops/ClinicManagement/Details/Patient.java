@@ -29,16 +29,16 @@ public class Patient {
 	public void setPtmobile(String ptmobile) {
 		this.ptmobile = ptmobile;
 	}//adding details of patient
-	public static void addPatient() {
+	public  void addPatient() {
 		System.out.println("enter the patient details");
 		System.out.println("enter patient id");
-		int ptid=Utility.getInt();
+		this.ptid=Utility.getInt();
 		System.out.println("enter patient name");
-		String ptname=Utility.getString();
+		this.ptname=Utility.getString();
 		System.out.println("enter patient age:");
-		int ptage=Utility.getInt();
+		this.ptage=Utility.getInt();
 		System.out.println("enter patient mobile number");
-		String ptmobile=Utility.getString();
+		this.ptmobile=Utility.getString();
 }
 	public String toString() {
 		return "Patient[ptid:"+ptid+", ptname:"+ptname+", ptage:"+ptage+", ptmobile:"+ptmobile+"]";
