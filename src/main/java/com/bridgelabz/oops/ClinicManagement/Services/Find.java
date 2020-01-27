@@ -2,13 +2,16 @@ package com.bridgelabz.oops.ClinicManagement.Services;
 
 import java.util.ArrayList;
 
+import com.bridgelabz.oops.ClinicManagement.Details.Docter;
+import com.bridgelabz.oops.ClinicManagement.Details.Patient;
+
 public class Find {
 	//finding by docter id
-	public ArrayList<Docter> findById(ArrayList<Docter> ald, int did) {
+	public ArrayList<Docter> findById(ArrayList<Docter> ad, int drid) {
 		ArrayList<Docter> temp=new ArrayList<Docter>();
-		for(Docter docter:ald)
+		for(Docter docter:ad)
 		{
-			if(docter.getDrid()==did)
+			if(docter.getDrid()==drid)
 			{
 				temp.add(docter);
 			}
@@ -17,34 +20,7 @@ public class Find {
 
 		return temp;
 	}
-//finding by docter  name
-	public ArrayList<Docter> findByDrname(ArrayList<Docter> ald, String dname) {
 
-		ArrayList<Docter> temp=new ArrayList<Docter>();
-
-		for(Docter docter:ald)
-		{
-			if(docter.getDrname()==dname)
-			{
-				temp.add(docter);
-			}
-		}
-		return temp;
-	}
-	//finding by docter availability
-	public ArrayList<Docter> FindByDravl (ArrayList<Docter> ald, String availability)  //search doctor by availability
-	{
-		ArrayList<Docter> temp=new ArrayList<Docter>();
-
-		for(Docter docter:ald)
-		{
-			if(docter.getDravl()==availability)
-			{
-				temp.add(docter);
-			}
-		}
-		return temp;	
-	}
 //finding by patient id
 	public ArrayList<Patient> findByPtId(ArrayList<Patient> alp, int pid1) {
 		ArrayList<Patient> temp=new ArrayList<Patient>();
@@ -57,36 +33,6 @@ public class Find {
 			}
 		}
 		return temp;
-	}
-//finding by patient availability
-	public ArrayList<Patient> findByPtavl(ArrayList<Patient> alp, String mobile) {
-
-
-
-		ArrayList<Patient> temp=new ArrayList<Patient>();
-
-		for(Patient patient:alp)
-		{
-			if(patient.getPtmobile()==mobile)
-			{
-				temp.add(patient);
-			}
-		}
-		return temp;
-
-	}
-//finding by patient name
-	public ArrayList<Patient> findByPtname(ArrayList<Patient> alp, String pname1) {
-		ArrayList<Patient> temp=new ArrayList<Patient>();
-
-		for(Patient patient:alp)
-		{
-			if(patient.getPtname()==pname1)
-			{
-				temp.add(patient);
-			}
-		}
-		return temp;
-	}		
+	}	
 }
                  
