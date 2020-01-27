@@ -9,7 +9,7 @@ public class Utility {
 	static Scanner scan = new Scanner(System.in);
 
 	// Taking the String data n returning
-	public static                           String getString() {
+	public static  String getString() {
 
 		return scan.next();
 
