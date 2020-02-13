@@ -1,8 +1,8 @@
-//purpose : implemented Facadedesign pattern
+//purpose : implemented Adaptordesign pattern
 //File    :FacadePattern.java
 package com.bridgelabz.DesignPatterns.StructuralDesignPatterns.Adaptor;
 
-public class FacadePattern {
+public class AdaptorPattern {
 public static void main(String[] args) {
 	CreditCard credit=new BankCustomer();  
 	  credit.giveBankDetails();  
